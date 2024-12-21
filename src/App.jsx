@@ -1,9 +1,9 @@
-import Homepage from "./homepage/Homepage"
+import Landingpage from "./landingpage/Landingpage"
 function App() {
 
   return (
     <>
-    <Homepage/>
+    <Landingpage/>
     </>
   )
 }
