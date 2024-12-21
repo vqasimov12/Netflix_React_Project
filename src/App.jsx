@@ -1,11 +1,10 @@
-import Landingpage from "./landingpage/Landingpage"
+import Landingpage from "./landingpage/Landingpage";
 function App() {
-
   return (
     <>
-    <Landingpage/>
+      <Landingpage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
