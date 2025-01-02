@@ -31,7 +31,7 @@ const Trending = () => {
     getFilms();
   }, [selectedContent]);
   return (
-    <div className="w-full px-6 sm:px-8 lg:px-[148px] h-[600px] mt-[105px]">
+    <div className="w-full h-[60px] mt-[105px]">
       <h2 className="font-[Roboto] text-[24px] tracking-wide font-bold text-white mb-[17px]">{t("trendingNow") }</h2>
       <CustomSelect
         selectedOption={selectedContent}
@@ -39,8 +39,6 @@ const Trending = () => {
         options={contents}
         size={"lg:w-[145px]"}
       />
-<h3 className="font-[Roboto] leading-[27px] mt-20 text-[24px] font-bold text-white mb-[17px] ">{t("reasonsToJoinTitle")}</h3>
-
     </div>
   );
 };

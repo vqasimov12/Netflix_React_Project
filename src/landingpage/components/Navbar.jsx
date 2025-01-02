@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next';
 import { useEffect,useState } from 'react';
 import NetflixLogo from"../../assets/images/Netflix.png"
-import CustomSelect from"../../common/components/CustomSelect"
+import CustomSelect from"../components/CustomSelect"
 import LanguageIcon from '../../assets/images/LanguageIcon.svg';
 
 const Navbar = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import bgImage from "../../assets/images/bgImage.png";
-import GetStarted from "../../common/components/GetStarted";
+import GetStarted from "./GetStarted";
 import { useTranslation } from "react-i18next";
 const Entry = () => {
   const {t}=useTranslation()
