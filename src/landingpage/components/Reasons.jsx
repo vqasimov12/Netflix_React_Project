@@ -1,9 +1,9 @@
 import React from "react";
 import ReasonCard from "./ReasonCard";
-import televisionIcon from"../../assets/images/televisionIcon.svg"
-import telescopeIcon from"../../assets/images/telescopeIcon.svg"
-import profilesIcon from"../../assets/images/profilesIcon.svg"
-import DownArrowIcon from"../../assets/images/DownArrowIcon.svg"
+import televisionIcon from"../../assets/icons/televisionIcon.svg"
+import telescopeIcon from"../../assets/icons/telescopeIcon.svg"
+import profilesIcon from"../../assets/icons/profilesIcon.svg"
+import DownArrowIcon from"../../assets/icons/DownArrowIcon.svg"
 
 const Reasons = () => {
   return (

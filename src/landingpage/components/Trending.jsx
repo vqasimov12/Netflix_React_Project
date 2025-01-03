@@ -20,8 +20,8 @@ const Trending = () => {
     try {
       const response = await fetch("");
       if (!response.ok) throw new Error("Can not get films");
-      const data = await response.json();
-      setFilms(data);
+      // const data = await response.json();
+      // setFilms(data);
     } catch (error) {
       console.error(error.message);
     }
@@ -29,7 +29,7 @@ const Trending = () => {
 
   useEffect(() => {
     getFilms();
-  }, [selectedContent]);
+  }, []);
   return (
     <div className="w-full h-[60px] mt-[105px]">
       <h2 className="font-[Roboto] text-[24px] tracking-wide font-bold text-white mb-[17px]">{t("trendingNow") }</h2>
