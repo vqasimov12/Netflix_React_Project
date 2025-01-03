@@ -1,5 +1,5 @@
 import React from "react";
-const CustomSelect = ({ selectedOption, setSelectedOption, options, logo,size }) => {
+const CustomSelect = ({ selectedOption, setSelectedOption, options, logo,size,pClass }) => {
   return (
     <div
       className={`border-[1px] border-zinc-400 rounded-[4px] hover:border-white relative bg-transparent ${size}`}
@@ -33,7 +33,7 @@ const CustomSelect = ({ selectedOption, setSelectedOption, options, logo,size })
       </select>
       <p
         className={`absolute top-1 ${
-          logo ? "left-10 hidden sm:block" : "left-2"
+          logo ? `${pClass}` : "left-2"
         } text-white bg-transparent pointer-events-none`}
       >
         {selectedOption.title}

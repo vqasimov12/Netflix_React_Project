@@ -5,6 +5,7 @@ import Trending from "./components/Trending";
 import Navbar from "./components/Navbar";
 import ReasonsToJoin from "./components/ReasonsToJoin";
 import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 const Landingpage = () => {
   return (
     <div className="overflow-hidden relative bg-[#000000]">
@@ -15,6 +16,7 @@ const Landingpage = () => {
         <Trending />
         <ReasonsToJoin />
         <FAQ />
+      <Footer/>
       </div>
     </div>
   );
