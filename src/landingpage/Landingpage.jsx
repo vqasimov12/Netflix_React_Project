@@ -15,7 +15,6 @@ const Landingpage = () => {
         <Trending />
         <ReasonsToJoin />
         <FAQ />
-        <Trending />
       </div>
     </div>
   );
