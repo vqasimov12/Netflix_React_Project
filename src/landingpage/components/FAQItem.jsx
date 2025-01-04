@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import plus from "../../assets/icons/plus.svg";
+import plus from "icons/plus.svg";
 
 const FAQItem = ({ title, desc, id, openItem, setOpenItem }) => {
   const isOpen = openItem === id;

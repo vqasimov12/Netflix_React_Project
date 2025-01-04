@@ -1,9 +1,9 @@
 import React from "react";
-import GetStarted from "./GetStarted";
+import GetStarted from "landingComponents/GetStarted";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
-import CustomSelect from "./CustomSelect";
-import LanguageIcon from "../../assets/images/LanguageIcon.svg";
+import CustomSelect from "landingComponents/CustomSelect";
+import LanguageIcon from "images/LanguageIcon.svg";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -37,7 +37,7 @@ const Footer = () => {
           }
           buttonClass={
             "bg-[#e50914] gap-2 sm:gap-3 px-4 h-[48px] mt-4 sm:mt-0 sm:h-[56px] rounded-[4px] text-[18px] text-white w-[156px] sm:w-[186px] lg:w-[207px] flex items-center justify-center"
-          }
+          } id={"animated-input1"}
         />
         <div className="flex flex-col justify-center w-full  mt-[68px]">
           <div className="flex items-center gap-1">

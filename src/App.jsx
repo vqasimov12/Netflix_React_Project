@@ -1,8 +1,11 @@
-import Landingpage from "./landingpage/Landingpage";
+import Landingpage from "landing/Landingpage";
+import SingIn from "./signIn/SingIn";
+import SingUp from "./signUp/SignUp";
 function App() {
   return (
     <>
-      <Landingpage />
+      {/* <Landingpage /> */}
+      <SingIn/>
     </>
   );
 }

@@ -1,10 +1,9 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
 import { useEffect,useState } from 'react';
-import NetflixLogo from"../../assets/images/Netflix.png"
-import CustomSelect from"../components/CustomSelect"
-import LanguageIcon from '../../assets/images/LanguageIcon.svg';
-import { ThemeStore } from '../../common/Store';
+import NetflixLogo from"images/Netflix.png"
+import CustomSelect from"landingComponents/CustomSelect"
+import LanguageIcon from 'images/LanguageIcon.svg';
 const Navbar = () => {
   const {t}=useTranslation()
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FAQItem from "./FAQItem";
+import FAQItem from "landingComponents/FAQItem";
 import { useTranslation } from "react-i18next";
 
 const FAQ = () => {
