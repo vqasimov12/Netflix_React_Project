@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import CustomSelect from "landingComponents/CustomSelect";
 import LanguageIcon from "images/LanguageIcon.svg";
 
-const Footer = () => {
+const Footer = ({canShow=true}) => {
   const { t } = useTranslation();
 
   const { i18n } = useTranslation();
@@ -25,10 +25,10 @@ const Footer = () => {
   return (
     <div className="w-full flex flex-col justify-center">
       <div className="flex flex-col sm:items-center justify-center mt-[64px]">
-        <h3 className="font-[Roboto] mt-20 text-[16px] leading-[16px] text-center text-white mb-[17px] ">
+      {canShow&&  <h3 className="font-[Roboto] mt-20 text-[16px] leading-[16px] text-center text-white mb-[17px] ">
           {t("footer1")}
-        </h3>
-        <GetStarted
+        </h3>}
+       {canShow&& <GetStarted
           mainClass={
             "flex items-center sm:justify-center w-full  lg:w-[784px] sm:gap-2 lg:gap-3 flex-wrap sm:flex-nowrap "
           }
@@ -38,7 +38,7 @@ const Footer = () => {
           buttonClass={
             "bg-[#e50914] gap-2 sm:gap-3 px-4 h-[48px] mt-4 sm:mt-0 sm:h-[56px] rounded-[4px] text-[18px] text-white w-[156px] sm:w-[186px] lg:w-[207px] flex items-center justify-center"
           } id={"animated-input1"}
-        />
+        />}
         <div className="flex flex-col justify-center w-full  mt-[68px]">
           <div className="flex items-center gap-1">
             <p className="opacity-[70%] font-[Roboto] text-[16px] leading-[20px] tracking-wide text-white ">

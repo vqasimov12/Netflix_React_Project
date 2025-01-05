@@ -3,6 +3,7 @@ import CustomSelect from "landingComponents/CustomSelect";
 import { useTranslation } from "react-i18next";
 import MovieCard from "landingComponents/MovieCard";
 import Modal from "landingComponents/Modal";
+import ScrollButton from "landingComponents/ScrollButton";
 const Trending = ({ scrollY }) => {
   const { t } = useTranslation();
   const [films, setFilms] = useState([]);
@@ -58,14 +59,18 @@ const Trending = ({ scrollY }) => {
         options={contents}
         size={"lg:w-[145px]"}
       />
-      <div className="flex overflow-x-auto scroll-smooth scrollbar-hide overflow-y-hidden py-5 pl-7 w-full gap-12 ">
-        {films?.map((film, index) => (
-          <MovieCard
-            film={film}
-            index={index}
-            setSelectedFilm={setSelectedFilm}
-          />
-        ))}
+      <div className="relative flex scrollbar-hide">
+        <ScrollButton direction={"left"} />
+        <div id="movie-card-container" className="flex overflow-x-auto scroll-smooth scrollbar-hide overflow-y-hidden py-5 pl-7 w-full gap-12 ">
+          {films?.map((film, index) => (
+            <MovieCard
+              film={film}
+              index={index}
+              setSelectedFilm={setSelectedFilm}
+            />
+          ))}
+        </div>
+        <ScrollButton direction={"right"} />
       </div>
       {modalOpen && (
         <Modal

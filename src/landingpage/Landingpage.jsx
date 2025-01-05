@@ -5,7 +5,7 @@ import Trending from "landingComponents/Trending";
 import Navbar from "landingComponents/Navbar";
 import ReasonsToJoin from "landingComponents/ReasonsToJoin";
 import FAQ from "landingComponents/FAQ";
-import Footer from "landingComponents/Footer";
+import Footer from "common/components/Footer";
 const Landingpage = () => {
   const [scrollY, setScrollY] = useState(0);
   const handleScroll=()=>{

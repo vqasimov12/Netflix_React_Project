@@ -15,7 +15,7 @@ const Modal = ({ scrollY, data, handleModalClose }) => {
       >
         <div className="size-[620px] border-px border-zinc-300 rounded-lg bg-zinc-900 overflow-scroll relative ">
           <button
-            className="z-8 absolute top-4 right-4 size-[30px] hover:bg-zinc-500/25 hover:cursor-pointer"
+            className="z-30 absolute top-4 right-4 size-[30px] hover:bg-zinc-500/25 hover:cursor-pointer"
             onClick={handleModalClose}
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">

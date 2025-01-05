@@ -4,8 +4,11 @@ import { useEffect,useState } from 'react';
 import NetflixLogo from"images/Netflix.png"
 import CustomSelect from"landingComponents/CustomSelect"
 import LanguageIcon from 'images/LanguageIcon.svg';
+import {useNavigate} from"react-router"
+
 const Navbar = () => {
   const {t}=useTranslation()
+  const navigate= useNavigate()
 
   const { i18n } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState({
@@ -40,7 +43,7 @@ const Navbar = () => {
           size={"w-[62px] sm:w-[128px] h-[32px]"}
           pClass={"left-10 hidden sm:block"}
       />
-      <button className="w-[75px] h-8 bg-[#E50914] rounded-[4px] font-bold text-[14px] text-white">{t("signInButton")}</button>
+      <button onClick={()=>{navigate("/signin")}} className="w-[75px] h-8 bg-[#E50914] rounded-[4px] font-bold text-[14px] text-white">{t("signInButton")}</button>
     </div>
   </div>
   

@@ -12,7 +12,7 @@ const FormInput = ({
     <div className="flex flex-col ">
       <input
         className={inputStyle}
-        value={value}
+        defaultValue={value}
         type={type}
         name={name}
         onChange={(e) => {

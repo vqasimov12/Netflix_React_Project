@@ -1,16 +1,20 @@
 import { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useTranslation } from "react-i18next";
-import { div } from "motion/react-client";
+import { useNavigate } from "react-router";
 
 const GetStarted = ({ mainClass, inlineDivClass, buttonClass, id }) => {
+  const navigate = useNavigate();
   const [isFocused, setIsFocused] = useState(false);
   const [value, setValue] = useState("");
   const { t } = useTranslation();
   const [errorShow, setErrorShow] = useState(false);
   const getStartedAction = () => {
     if (value === "") setErrorShow(true);
-    else setErrorShow(false);
+    else {
+      setErrorShow(false);
+      navigate("/signup",{state:{email:value}})
+    }
   };
   return (
     <div className="flex flex-col justify-center">
