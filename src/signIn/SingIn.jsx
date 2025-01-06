@@ -20,22 +20,20 @@ const SingIn = () => {
   const [formData, setFormData] = useState({});
   const login = async () => {
     try {
-      console.log(formData);
+      console.log(email ? { ...formData, email: email } : formData);
       const response = await fetch("http://localhost:5001/api/v1/auth/login", {
         method: "POST",
         headers: {
-          Accept: "application.json",
-          "Content-Type": "application.json",
+          Accept: "application/json",
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(email ? { ...formData, email: email } : formData),
       });
 
-      console.log(response);
-      if (!response.ok) throw new Error("Failed to sing In");
+      // if (!response.ok) throw new Error("Failed to sing In");
       const data = await response.json();
       console.log(data);
-      console.log(accessToken);
-      addAccessToken(data.token);
+      // addAccessToken(data.token);
       toast.success("Successfully signed in", {
         position: "top-center",
         autoClose: 5000,
@@ -46,7 +44,7 @@ const SingIn = () => {
         progress: undefined,
         theme: "dark",
       });
-      console.log(accessToken);
+      // console.log(accessToken);
     } catch (error) {
       console.error(error);
       toast.error("Can not signed in", {

@@ -27,31 +27,37 @@ const SingUp = () => {
         body: JSON.stringify(formData),
       });
       console.log(response);
-      if (!response.ok) throw new Error("Failed to sing up");
       const data = await response.json();
-      toast.success('Signed up successfully', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
-      navigate("/signin",{state:{email:formData.email}});
+      if (response.ok) {
+        navigate("/signin",{state:{email:formData.email}});
+        toast.success('Signed up successfully', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+     
+      }
+      else{
+        toast.error('Can not signed up', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      }
+      
       console.log(data);
     } catch (error) {
-      toast.error('Can not signed up', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
+    
       console.error(error);
     }
   };
