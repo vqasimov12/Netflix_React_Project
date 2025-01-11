@@ -5,6 +5,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        roboto:["Roboto","sans-serif"],
+        poppins:["Poppins","serif"],
+      },
       keyframes: {
         floatUp: {
           "0%": { transform: "translateY(0px)", fontSize: "16px", color: "#ffffff" },
@@ -19,6 +23,7 @@ export default {
         floatUp: "floatUp 0.2s ease-out forwards",
         focusLost: "focusLost 0.2s ease-out forwards",
       },
+      
     },
   },
   plugins: [

@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import bgImage from "images/bgImage.png";
 import { useTranslation } from "react-i18next";
 import Form from "common/components/Form";
 import Netflix from "images/Netflix.png";
 import { ThemeStore } from "common/Store.js";
 import { useStore } from "zustand";
-import Footer from "common/components/Footer";
 import { useNavigate } from "react-router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -18,33 +17,28 @@ const SingIn = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [formData, setFormData] = useState({});
+  
+    useEffect(() => {
+      if (email) {
+        setFormData((prevState) => ({ ...prevState, email: email }));
+      }
+    }, [email]);
+  
   const login = async () => {
     try {
-      console.log(email ? { ...formData, email: email } : formData);
+     
       const response = await fetch("http://localhost:5001/api/v1/auth/login", {
         method: "POST",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(email ? { ...formData, email: email } : formData),
+        body: JSON.stringify(formData),
       });
 
-      // if (!response.ok) throw new Error("Failed to sing In");
+      if (!response.ok) throw new Error("Failed to sing In");
       const data = await response.json();
-      console.log(data);
-      // addAccessToken(data.token);
-      toast.success("Successfully signed in", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
-      // console.log(accessToken);
+      addAccessToken(data.token);
     } catch (error) {
       console.error(error);
       toast.error("Can not signed in", {
@@ -120,7 +114,7 @@ const SingIn = () => {
               className="w-[90px] sm:w-[120px] lg:w-[160px]  "
             />
           </button>
-
+<div className="mt-20">
           <Form
             headerText={{
               title: `${t("signInButton")}`,
@@ -133,20 +127,10 @@ const SingIn = () => {
             formStyle={
               "w-[280px] sm:w-[350px] md:w-[400px] lg:w-[450px] h-[470px] bg-black/70 px-[15px] sm:px-[30px] md:px-[40px] lg:px-[70px] pt-[48px] flex flex-col gap-4 rounded-[4px] "
             }
-          />
+          /></div>
         </div>
       </div>
-      <div className="  relative flex  h-[410px] mb-[90px] w-full mt-[-30px] bg-transparent">
-        <div
-          className="h-[400px] flex pt-10  px-6 sm:px-8 lg:px-[148px] top-[-60px]"
-          style={{
-            background:
-              "linear-gradient(11.26deg, rgba(0, 0, 0, 0.55) 10%, rgba(0, 0, 0, 0.57) 17.25%, rgba(0, 0, 0, 0.55) 24.5%, rgba(0, 0, 0, 0.55) 31.75%, rgba(0, 0, 0, 0.56) 39%, rgba(0, 0, 0, 0.55) 46.25%, rgba(0, 0, 0, 0.55) 53.5%, rgba(0, 0, 0, 0.50) 60.75%, rgba(0, 0, 0, 0.55) 68%, rgba(0, 0, 0, 0.53) 75.25%, rgba(0, 0, 0, 0.36) 82.5%, rgba(0, 0, 0, 0.34) 89.75%, rgba(0, 0, 0, 0.3) 97%)",
-          }}
-        >
-          <Footer canShow={false} />
-        </div>
-      </div>
+      
       <ToastContainer />
     </div>
   );

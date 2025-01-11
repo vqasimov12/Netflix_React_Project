@@ -12,8 +12,8 @@ export default defineConfig({
       images: "/src/assets/images",
       locales: "/src/locales",
       pages: "/src/pages",
-      landingComponents:"/src/landingpage/components",
-      landing:"/src/landingpage"
+      landingComponents:"/src/pages/landingpage/components",
+      landing:"/src/pages/landingpage",
     },
   },
 })

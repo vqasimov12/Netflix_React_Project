@@ -44,7 +44,7 @@ const FAQ = () => {
   const [openItem,setOpenItem]=useState(null)
   return (
     <div className="flex flex-col justify-center gap-2  w-full mt-[17px]">
-       <h3 className="font-[Roboto] text-left leading-[27px] mt-[60px] text-[24px] font-bold text-white mb-[17px] ">
+       <h3 className="text-left leading-[27px] mt-[60px] text-[24px] font-bold text-white mb-[17px] ">
         {t("faqTitle")}
       </h3>
         {data.map((item) => (

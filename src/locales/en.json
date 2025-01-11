@@ -61,5 +61,8 @@
   "doNotSell": "Do Not Sell or Share My Personal Information",
   "mediaCenter": "Media Center",
   "redeemGiftCards": "Redeem Gift Cards",
-  "languageSelector": "English"
+  "languageSelector": "English",
+  "homeLabel": "Home",
+  "lostYourWay": "Lost your way?",
+  "error404": "Error 404: Not found"
 }

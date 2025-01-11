@@ -31,15 +31,16 @@ const Trending = ({ scrollY }) => {
       console.error(error.message);
     }
   };
+  
+  const handleModalClose = () => {
+    setModalOpen(false);
+    setSelectedFilm(null);
+  };
 
   useEffect(() => {
     getFilms();
   }, [selectedContent]);
 
-  const handleModalClose = () => {
-    setModalOpen(false);
-    setSelectedFilm(null);
-  };
   useEffect(() => {
     if (selectedFilm) setModalOpen(true);
   }, [selectedFilm]);

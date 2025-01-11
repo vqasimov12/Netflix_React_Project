@@ -61,5 +61,8 @@
   "doNotSell": "Не продавать или делиться моей персональной информацией",
   "mediaCenter": "Медиацентр",
   "redeemGiftCards": "Активировать подарочные карты",
-  "languageSelector": "Русский"
+  "languageSelector": "Русский",
+  "homeLabel": "Главная",
+   "lostYourWay": "Заблудились?",
+   "error404": "Ошибка 404: Не найдено"
 }
