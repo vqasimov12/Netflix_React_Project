@@ -39,6 +39,7 @@ const SingIn = () => {
       if (!response.ok) throw new Error("Failed to sing In");
       const data = await response.json();
       addAccessToken(data.token);
+      navigate("/home")
     } catch (error) {
       console.error(error);
       toast.error("Can not signed in", {

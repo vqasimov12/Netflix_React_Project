@@ -13,6 +13,7 @@ export default defineConfig({
       locales: "/src/locales",
       pages: "/src/pages",
       landingComponents:"/src/pages/landingpage/components",
+      homeComponents:"/src/pages/homepage/components",
       landing:"/src/pages/landingpage",
     },
   },
