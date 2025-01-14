@@ -4,9 +4,9 @@ import NetlixIcon from"icons/NetflixIcon.png"
 
 const Navbar = ({ selectedTab, setSelectedTab, tabItems }) => {
   return (
-    <div className="px-10 sm:px-[65px] lg:px-[90px] top-[30px] lg:gap-[67px] w-full overflow-x-hidden absolute z-1 flex items-center justify-between sm:justify-normal">
+    <div className="px-9 sm:px-[65px] lg:px-[90px] top-[20px] gap-[28px] lg:gap-[67px] w-full overflow-x-hidden absolute z-1 flex items-center sm:justify-normal">
       <img className="hidden sm:block w-[140px] h-[99px] " src={NetflixLogo} alt="" />
-      <img className=" block sm:hidden w-8 h-[60px]" src={NetlixIcon} alt="" />
+      <img className=" block sm:hidden w-7 h-[40px]" src={NetlixIcon} alt="" />
       <div className="gap-3 sm:gap-[28px] flex items-center justify-center">
         {tabItems.map((item) => (
           <button

@@ -21,7 +21,7 @@ const ScrollButton = ({ direction }) => {
       onMouseLeave={handleMouseLeave}
       className={`absolute z-10 ${
         isRight ? "right-0" : "left-0"
-      } top-24 hidden md:flex items-center justify-center h-28 p-2 rounded-full`}
+      } top-24 hidden md:flex items-center justify-center h-28 p-0 rounded-full`}
       style={{
         background: isHovered
           ? "rgba(50, 50, 50, 0.8)" 

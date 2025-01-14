@@ -5,7 +5,7 @@ import Trending from "landingComponents/Trending";
 import Navbar from "landingComponents/Navbar";
 import ReasonsToJoin from "landingComponents/ReasonsToJoin";
 import FAQ from "landingComponents/FAQ";
-import Footer from "common/components/Footer";
+import Footer from "landingComponents/Footer";
 import { ThemeStore } from "common/Store.js";
 import { useStore } from "zustand";
 import { useNavigate } from "react-router";
@@ -27,7 +27,8 @@ const Landingpage = () => {
 
   useEffect(()=>{
 if(accessToken!=="")
-  navigate("/home")
+  // navigate("/home")
+{}
 },[])
   return (
     <div id="landing" className="overflow-hidden relative bg-[#000000]">

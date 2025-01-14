@@ -64,5 +64,12 @@
   "languageSelector": "English",
   "homeLabel": "Home",
   "lostYourWay": "Lost your way?",
-  "error404": "Error 404: Not found"
+  "error404": "Error 404: Not found",
+  "home": "Home",
+  "movies": "Movies",
+  "tvShows": "TV Shows",
+  "series": "SERIES",
+  "play": "Play",
+  "info":"More Info",
+  "#1_in_tv_shows_today": "#1 in TV Shows Today"
 }

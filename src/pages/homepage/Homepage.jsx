@@ -3,17 +3,19 @@ import Navbar from "homeComponents/Navbar";
 import Movies from "homeComponents/Movies";
 import Shows from "homeComponents/Shows";
 import Home from "homeComponents/Home";
+import { useTranslation } from "react-i18next";
 const Homepage = () => {
+  const { t } = useTranslation();
   const [selectedTab, setSelectedTab] = useState({
-    title: "Home",
+    title: t("home"),
     value: "home",
   });
 
   const [trendingMovies, SetTrendingMovies] = useState([]);
   const tabltems = [
-    { title: "Home", value: " home" },
-    { title: "TV Shows", value: "tv" },
-    { title: "Movies", value: "movie" },
+    { title: t("Home"), value: " home" },
+    { title: t("tvShows"), value: "tv" },
+    { title: t("movies"), value: "movie" },
   ];
 
   const getMovies = async () => {
@@ -31,12 +33,10 @@ const Homepage = () => {
 
   const visibleTab = () => {
     switch (selectedTab.value) {
-      case "home":
-        return <Movies />;
+      case "movie":
+        return <Movies movies={trendingMovies} />;
       case "tv":
         return <Shows />;
-      case "home":
-        return <Home />;
       default:
         return <Home topOneMovie={trendingMovies[0]} />;
     }
@@ -46,9 +46,16 @@ const Homepage = () => {
     getMovies();
   }, []);
 
-  return <div className="relative bg-[#000000] w-full h-screen">
-    <Navbar selectedTab={selectedTab} setSelectedTab={setSelectedTab} tabItems={tabltems} />
-    {visibleTab()} </div>;
+  return (
+    <div className="relative flex flex-col bg-[#000000] w-full h-screen">
+      <Navbar
+        selectedTab={selectedTab}
+        setSelectedTab={setSelectedTab}
+        tabItems={tabltems}
+      />
+      {visibleTab()}{" "}
+    </div>
+  );
 };
 
 export default Homepage;

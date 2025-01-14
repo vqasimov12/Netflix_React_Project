@@ -2,6 +2,7 @@ import Landingpage from "landing/Landingpage";
 import SingIn from "pages/signIn/SingIn";
 import SingUp from "pages/signUp/SignUp";
 import NotFound from "pages/notFoundPage/NotFound";
+import Details from "details/Details";
 import Homepage from "pages/homepage/Homepage";
 import { BrowserRouter, Routes, Route } from "react-router";
 import { ThemeStore } from "common/Store.js";
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Landingpage />} />
         <Route path="/signin" element={<SingIn />} />
         <Route path="/signup" element={<SingUp />} />
+        <Route path="/details" element={<Details />} />
         {accessToken && <Route path="/home" element={<Homepage />} />}
         <Route path="*" element={<NotFound />} />
       </Routes>

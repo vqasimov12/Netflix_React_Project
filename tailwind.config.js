@@ -6,8 +6,8 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        roboto:["Roboto","sans-serif"],
-        poppins:["Poppins","serif"],
+        Roboto:["Roboto","sans-serif"],
+        Poppins:["Poppins","serif"],
       },
       keyframes: {
         floatUp: {

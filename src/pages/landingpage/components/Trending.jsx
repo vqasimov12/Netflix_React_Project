@@ -3,7 +3,7 @@ import CustomSelect from "landingComponents/CustomSelect";
 import { useTranslation } from "react-i18next";
 import MovieCard from "landingComponents/MovieCard";
 import Modal from "landingComponents/Modal";
-import ScrollButton from "landingComponents/ScrollButton";
+import ScrollButton from "common/components/ScrollButton";
 const Trending = ({ scrollY }) => {
   const { t } = useTranslation();
   const [films, setFilms] = useState([]);

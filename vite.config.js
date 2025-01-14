@@ -15,6 +15,7 @@ export default defineConfig({
       landingComponents:"/src/pages/landingpage/components",
       homeComponents:"/src/pages/homepage/components",
       landing:"/src/pages/landingpage",
+      details:"/src/pages/detailspage"
     },
   },
 })
