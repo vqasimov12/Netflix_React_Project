@@ -8,7 +8,7 @@ const CustomSelect = ({ selectedOption, setSelectedOption, options, logo,size,pC
         <div className="absolute z-4 top-[10px] left-2 flex items-center justify-center ">
           {logo}
         </div>
-      )}{" "}
+      )}
       <select
         onChange={(e) => {
           const selectedItem = options.find(
